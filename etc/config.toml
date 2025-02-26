@@ -1,0 +1,9 @@
+[server]
+host = "localhost"
+port = "8080"
+mode = "debug"
+version = "v1"
+
+[log]
+file_path = "./output/log.log"
+level = -1
