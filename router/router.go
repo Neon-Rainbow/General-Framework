@@ -1,6 +1,9 @@
 package router
 
 import (
+	"fmt"
+
+	"backend/config"
 	"backend/log"
 
 	"github.com/gin-gonic/gin"
@@ -15,5 +18,5 @@ func Setup() {
 			"message": "pong",
 		})
 	})
-	_ = r.Run(":8080")
+	_ = r.Run(fmt.Sprintf("%v:%v", config.Get().Server.Host, config.Get().Server.Port))
 }
